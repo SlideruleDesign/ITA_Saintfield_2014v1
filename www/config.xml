@@ -1,0 +1,12 @@
+<widget>
+        <preference name="MySetting" value="true" />
+        <feature name="MyPlugin" value="MyPluginClass" />
+        <access origin="*" />
+        <content src="index.html" />
+   
+		<icon src="icon.png" />
+		<gap:platform name="android" />
+ 
+ 
+ 
+ </widget>

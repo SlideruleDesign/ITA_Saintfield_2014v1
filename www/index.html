@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+    <head>
+        <script>
+        (function() {
+    if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(
+            document.createTextNode("@-ms-viewport{width:auto!important}")
+        );
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+    }
+})();
+</script>
+        <title>ITA: Saintfield</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />    
+ 
+      
+      <link rel="stylesheet" type="text/css" href="css/src/main.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/appframework.css"  />
+
+      <link rel="stylesheet" type="text/css" href="css/src/badges.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/buttons.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/lists.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/forms.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/grid.css"  />
+
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.actionsheet.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.popup.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.selectBox.css"  />
+        
+      <link rel="stylesheet" type="text/css" href="css/src/android.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/win8.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/bb.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/ios7.css"  />
+      <link rel="stylesheet" type="text/css" href="css/src/ios.css"  />    
+
+      <link rel="stylesheet" type="text/css" href="css/ita.css"  />    
+	  
+	          <script type="text/javascript" charset="utf-8" src="./appframework.js"></script>
+        <!-- include af.desktopBrowsers.js on desktop browsers only -->
+        <script>
+
+            function loadedPanel(what) {
+                //We are going to set the badge as the number of li elements inside the target
+                $.ui.updateBadge("#aflink", $("#af").find("li").length);
+            }
+
+
+            function unloadedPanel(what) {
+                console.log("unloaded " + what.id);
+            }
+
+            if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+                var script = document.createElement("script");
+                script.src = "plugins/af.desktopBrowsers.js";
+                var tag = $("head").append(script);
+            }
+           
+          
+        </script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.actionsheet.js"></script>
+         <script type="text/javascript" charset="utf-8" src="./plugins/af.css3animate.js"></script>
+         <script type="text/javascript" charset="utf-8" src="./plugins/af.passwordBox.js"></script>
+          <script type="text/javascript" charset="utf-8" src="./plugins/af.scroller.js"></script>
+           <script type="text/javascript" charset="utf-8" src="./plugins/af.selectBox.js"></script>
+            <script type="text/javascript" charset="utf-8" src="./plugins/af.touchEvents.js"></script>
+          <script type="text/javascript" charset="utf-8" src="./plugins/af.touchLayer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.popup.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="./ui/src/appframework.ui.js"></script>
+        <!-- <script type="text/javascript" charset="utf-8" src="./ui/transitions/all.js"></script> -->
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/fade.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/flip.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/pop.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slide.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideDown.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideUp.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.slidemenu.js"></script>
+
+        <script type="text/javascript">
+            /* This function runs once the page is loaded, but appMobi is not yet active */
+            //$.ui.animateHeaders=false;
+             var search=document.location.search.toLowerCase().replace("?","");
+             //if(!search)
+                //$.os.useOSThemes=false;
+                
+            if(search) //Android fix has too many buggy issues on iOS - can't preview with $.os.android
+            {
+
+               $.os.useOSThemes=true;
+                if(search=="win8")
+                    $.os.ie=true;
+                $.ui.ready(function(){
+                    $("#afui").get(0).className=search;
+                });
+            }
+            
+            var webRoot = "./";
+            // $.os.android=true;
+            $.ui.autoLaunch = false;
+            $.ui.openLinksNewTab = false;
+            //$.ui.resetScrollers=false;
+            
+
+            $(document).ready(function(){
+                   $.ui.launch();
+
+            });
+            
+            /* This code is used to run as soon as appMobi activates */
+            var onDeviceReady = function () {
+                AppMobi.device.setRotateOrientation("portrait");
+                AppMobi.device.setAutoRotate(false);
+                webRoot = AppMobi.webRoot + "";
+                //hide splash screen
+                AppMobi.device.hideSplashScreen();
+                $.ui.blockPageScroll(); //block the page from scrolling at the header/footer
+                $.ui.launch();
+
+            };
+            document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+
+            function showHide(obj, objToHide) {
+                var el = $("#" + objToHide)[0];
+
+                if (obj.className == "expanded") {
+                    obj.className = "collapsed";
+                } else {
+                    obj.className = "expanded";
+                }
+                $(el).toggle();
+
+            }
+
+
+            if($.os.android||$.os.ie||search=="android"){
+                $.ui.ready(function(){
+                    $("#main .list").append("<li><a id='toggleAndroidTheme'>Toggle Theme Color</a></li>");
+                    var $el=$("#afui");
+                    $("#toggleAndroidTheme").bind("click",function(e){
+                        if($el.hasClass("light"))
+                            $el.removeClass("light");
+                        else
+                            $el.addClass("light");
+                    });
+                });
+            }
+        </script>
+        <style>
+           .samplecode {
+                background: #ccc;
+                color: #000;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+           }
+
+           /* for the grid demo */
+           .grid > div {
+            border:1px dashed black;
+           }
+        </style>
+</head>
+
+    <body>
+<body> 
+<div id="afui">
+    <div id="content" style="">
+        
+    <!--List View Page-->
+        <div class="panel" title="Visit Saintfield" id="listview" data-footer="none" selected="true">
+            <ul class="list">
+                <li><a href="#item1">Background Information</a></li>
+                <li><a href="#item2">Food & Drink</a></li>
+                <li><a href="#item3">Accommodation</a></li>
+                <li><a href="#item4">Things to do</a></li>
+                <li><a href="#item5">Nightlife</a></li>
+                <li><a href="#item6"><img src="img/church_icon.jpg" height="42" width="42"> Churches</a></li>
+                <li><a href="#item7"><img src="img/shop_icon.png" height="42" width="42"> Shopping</a></li>
+                <li><a href="#item8"><img src="img/bank_icon.png" height="42" width="42"> Banks & ATMs</a></li>
+                <li><a href="#item9">Getting Around</a></li>
+            </ul>
+        </div>
+        
+    <!--Detail View Pages for each list items-->
+        <div class="panel" title="Background Information" id="item1" data-footer="none">
+			<img src="img/SHV.bmp">
+            <p>Saintfield was originally an early 17th-century settlement, from which the parish church survives. The present town form of Saintfield dates back to the early 18th century and the establishment of linen manufacturing and other trades by the Price family. The village had a number of corn, flour and flax mills, the remains of which are visible today, and has retained a tradition of textile manufacture through Saintfield Yarns. The architectural and historic significance of the town centre is reflected in its designation as a Conservation Area in 1997.</p>
+        </div>
+        
+        <div class="panel" title="Food & Drink" id="item2" data-footer="none">
+            <p>This is detail view for Item 2</p>
+        </div>
+        
+        <div class="panel" title="Accommodation" id="item3" data-footer="none">
+            <ul class="list inset">
+                       <li class="divider">
+                           Bed & Breakfast
+                        </li> 
+						<li>
+						<h2>Norr & Brown</h2>
+                    A family run Bed and Breakfast<br>
+					1 Todd’s Hill<br>
+					Saintfield<br>
+					BT24 7AR<br>
+					
+                        <br><span class="ita_phone"><a href="tel:+447921846468">Phone: (+44) 07921 846 468</a></span>
+	
+                        <br>
+                    </p>
+					</li>
+			</ul>
+        </div>        
+        <div class="panel" title="Things to do" id="item4" data-footer="none">
+            <p>This is detail view for Item 4</p>
+        </div>
+        
+        <div class="panel" title="Nightlife" id="item5" data-footer="none">
+            <p>This is detail view for Item 5</p>
+        </div>
+        
+        <div class="panel" title="Churches" id="item6" data-footer="none">
+            <p>This is detail view for Item 6</p>
+        </div>
+        
+        <div class="panel" title="Shopping" id="item7" data-footer="none">
+			
+            <p>This is detail view for Item 7</p>
+        </div>
+        
+        <div class="panel" title="Banks & ATMs" id="item8" data-footer="footerita">
+            <!--Bank Panels -->
+                
+					<!--<div id="bankinsetlist" title="Banks in Saintfield" class="panel" data-footer='footerui'>
+                    -->
+					<br>
+                    <ul class="list inset">
+                       <li class="divider">
+                           <img src="img/bank_icon.png" height="42" width="42">
+						   <img src="img/atm_icon.png" height="42" width="42"> Banks with 24hr ATMS
+                        </li> 
+						<li>
+							<h2>Danske Bank & ATM</h2>
+                    <p>Danske Bank can be found at the junction of Main Street ...
+                        <br>* 24hr ATM 
+                        <br>* Bureau de Change
+                        <br>* Full branch
+                        <br>
+                    </p>
+                        </li>
+                        
+                        <li class="divider">
+                           <img src="img/bank_icon.png" height="42" width="42"> Banks with Branches Only
+                        </li> 
+					<li>
+                            <h2>Progressive Building Society</h2>
+                        </li>
+                       <li class="divider">
+                          <img src="img/atm_icon.png" height="42" width="42"> ATMs
+                        </li> 
+	
+					
+					<li>
+
+					<h2>Ulster Bank ATM</h2>
+                    <p>Ulster Bank have an ATM outside the Petrol Station on the Crossgar Road ...
+                        <br>* 24hr ATM 
+                        <br>
+                    </p>
+					</li>
+					
+					<li>
+
+					<h2>First Trust Bank ATM</h2>
+                    <p>First Trust Bank have an ATM outside the VIVOxtra on the Ballynahinch Road ...
+                        <br>* 24hr ATM 
+                        <br>
+                    </p>
+					</li>
+					
+					</ul>
+					<!--
+					<li><a class="icon info big" href="#banks_item2">Ulster Bank ATM</a></li>
+					<li><a class="icon info big" href="#banks_item3">Prudential BS</a></li>	
+                    -->
+			<!--</div>	-->		
+			
+        </div>
+        
+        <div class="panel" title="Getting Around" id="item9" data-footer="footerita">
+            <ul class="list inset">
+                       <li class="divider">
+                           Taxi Companies in Sainfield
+                        </li> 
+						<li>
+						<h2>Ballynahinch Taxis</h2>
+                    <p>A local taxi company servicing the Saintfield Area. Great rates. Call now.<br><br>
+                        <span class="ita_phone"><a href="tel:+442897563322">Phone: (+44) 028 9756 3322</a></span>
+	
+                        <br>
+                    </p>
+					</li>
+			</ul>
+        </div>
+
+
+
+
+		<!-------------------------------->
+		<!-------------------------------->
+		<!--  End of First Level Menus	-->
+		<!-------------------------------->
+		<!-------------------------------->
+		
+
+		
+    </div>
+</div>
+
+            <footer id='footerita'>
+                <p><h2>&#169 2014, IrishTownApps.com</h2></p>
+            </footer>
+</body>
+</html>    
