@@ -179,9 +179,9 @@
     <!--List View Page-->
         <div class="panel" title="Visit Saintfield" id="listview" data-footer="none" selected="true">
             <ul class="list">
-                <li><a href="#item1">Background Information</a></li>
-                <li><a href="#item2">Food & Drink</a></li>
-                <li><a href="#item3">Accommodation</a></li>
+                <li><a href="#item1"><img src="img/book_icon.png"> Background Information</a></li>
+                <li><a href="#item2"><img src="img/fd_icon.png"> Food & Drink</a></li>
+                <li><a href="#item3"><img src="img/bb_icon.png"> Accommodation</a></li>
                 <li><a href="#item4">Things to do</a></li>
                 <li><a href="#item5">Nightlife</a></li>
                 <li><a href="#item6"><img src="img/church_icon.jpg" height="42" width="42"> Churches</a></li>
@@ -193,8 +193,19 @@
         
     <!--Detail View Pages for each list items-->
         <div class="panel" title="Background Information" id="item1" data-footer="none">
-			<img src="img/SHV.bmp">
-            <p>Saintfield was originally an early 17th-century settlement, from which the parish church survives. The present town form of Saintfield dates back to the early 18th century and the establishment of linen manufacturing and other trades by the Price family. The village had a number of corn, flour and flax mills, the remains of which are visible today, and has retained a tradition of textile manufacture through Saintfield Yarns. The architectural and historic significance of the town centre is reflected in its designation as a Conservation Area in 1997.</p>
+			<table>
+			<tr>
+			<td>
+			<img src="img/SHV.bmp" style="width:100px;height:100px"></td>
+			<td><h1>History of Saintfield</h1></td>
+			</tr></table>
+            <p>Saintfield was originally an early 17th-century settlement, from which the parish church 
+			survives. The present town form of Saintfield dates back to the early 18th century and the 
+			establishment of linen manufacturing and other trades by the Price family. The village had 
+			a number of corn, flour and flax mills, the remains of which are visible today, and has 
+			retained a tradition of textile manufacture through Saintfield Yarns. The architectural 
+			and historic significance of the town centre is reflected in its designation as a 
+			Conservation Area in 1997.</p>
         </div>
         
         <div class="panel" title="Food & Drink" id="item2" data-footer="none">
@@ -202,22 +213,54 @@
         </div>
         
         <div class="panel" title="Accommodation" id="item3" data-footer="none">
+		<br>
             <ul class="list inset">
-                       <li class="divider">
-                           Bed & Breakfast
-                        </li> 
-						<li>
-						<h2>Norr & Brown</h2>
-                    A family run Bed and Breakfast<br>
+                    <li class="divider">
+                    Bed & Breakfast
+                    </li>
+
+
+						
+					<li>
+					<h2>Norr & Brown</h2>
+                    A beautiful period Bed and Breakfast attached to a cafe and chocolatier. Yum.<br>
 					1 Todd’s Hill<br>
 					Saintfield<br>
 					BT24 7AR<br>
-					
-                        <br><span class="ita_phone"><a href="tel:+447921846468">Phone: (+44) 07921 846 468</a></span>
-	
-                        <br>
-                    </p>
+                    <br><span class="ita_phone"><a href="tel:+447921846468">Call: (+44) 07921 846 468</a></span>
+					<br>
 					</li>
+					
+					<li>
+					<h2>Green Acres</h2>
+                    A family run Bed and Breakfast<br>
+					119 Carryduff Road<br>
+					Lisburn<br>
+					BT27 6YL<br>
+                    <br><span class="ita_phone"><a href="tel:+442892638631">Call: (+44) 028 92638631</a></span><br><br>
+					<br><span class="ita_phone"><a href="tel:+447715172938">Call: (+44) 07715172938</a></span>
+					<br>
+					</li>
+                    
+					
+                    <li class="divider">
+                    Self-catered Accomodation
+                    </li>
+					
+					<li>
+					<h2>Brookvale Cottage</h2>
+                    A beautiful converted barn<br>
+					10 Vale Road<br>
+					Crossgar<br>
+					BT30 9JN<br>
+                    <br><span class="ita_phone"><a href="tel:+442844830910">Call: (+44) 028 44830910</a></span><br><br>
+					<br><span class="ita_phone"><a href="tel:+447971476123">Call: (+44) 07971476123</a></span>
+					<br>
+					</li>
+
+
+
+					
 			</ul>
         </div>        
         <div class="panel" title="Things to do" id="item4" data-footer="none">
@@ -237,7 +280,7 @@
             <p>This is detail view for Item 7</p>
         </div>
         
-        <div class="panel" title="Banks & ATMs" id="item8" data-footer="footerita">
+        <div class="panel" title="Banks & ATMs" id="item8" data-footer="none">
             <!--Bank Panels -->
                 
 					<!--<div id="bankinsetlist" title="Banks in Saintfield" class="panel" data-footer='footerui'>
