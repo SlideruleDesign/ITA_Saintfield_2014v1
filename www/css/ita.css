@@ -6,6 +6,8 @@
     -khtml-border-radius: 5px;
     border-radius: 5px;
     padding: 4px;
+	text-align:center;
+    font-size:large;
 }
 a
 {
